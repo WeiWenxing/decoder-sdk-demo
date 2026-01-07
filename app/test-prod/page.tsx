@@ -193,10 +193,10 @@ export default function ProdPage() {
               {result.frames && result.frames.length > 0 && !isVideoMode && (
                 <div>
                   <h3 className="text-sm font-semibold mb-2 text-gray-500">Extracted Frames ({result.frames.length})</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {result.frames.map((url: string, idx: number) => (
-                      <div key={idx} className="aspect-video bg-gray-200 rounded overflow-hidden shadow-sm border">
-                        <img src={url} alt={`Frame ${idx}`} className="w-full h-full object-cover" />
+                      <div key={idx} className="bg-gray-100 rounded-lg overflow-hidden shadow-md border">
+                        <img src={url} alt={`Frame ${idx}`} className="w-full h-auto block" />
                       </div>
                     ))}
                   </div>
